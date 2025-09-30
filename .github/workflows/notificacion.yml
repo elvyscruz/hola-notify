@@ -1,0 +1,16 @@
+name: Notificar actualización
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar notificación a ntfy.sh
+        run: |
+          curl -X POST https://ntfy.sh/devops-itla \
+            -H "Content-Type: text/plain" \
+            -d "app actualizada! por ${{ github.actor }}"
+
