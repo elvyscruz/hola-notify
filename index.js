@@ -1,1 +1,1 @@
-console.log("hola todos en el ITLA!")
+console.log("hola todos en el ITLA! con ntfy")
